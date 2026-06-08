@@ -21,39 +21,30 @@ The **MSP Operations Commander** transforms a Copilot Studio agent into an intel
 
 ## 🏗️ Architecture
 
-```text
-┌─────────────────────────────────────┐
-│       InhouseCIO Assistant          │
-│       (Copilot Studio Agent)        │
-├─────────────────────────────────────┤
-│                                     │
-│  ┌───────────────┐ ┌─────────────┐  │
-│  │ Client Context│ │ Compliance  │  │
-│  │   Switcher    │ │   Guard     │  │
-│  └───────┬───────┘ └──────┬──────┘  │
-│          │                │         │
-│  ┌───────┴───────┐ ┌──────┴──────┐  │
-│  │ Morning MSP   │ │ Evening MSP │  │
-│  │   Triage      │ │   Review    │  │
-│  └───────┬───────┘ └──────┬──────┘  │
-│          │                │         │
-├──────────┴────────────────┴─────────┤
-│         Knowledge Sources           │
-│  ┌──────────────┐ ┌──────────────┐  │
-│  │Client Profiles│ │  Ticket Log  │  │
-│  │(SharePoint)   │ │ (SharePoint) │  │
-│  └──────────────┘ └──────────────┘  │
-│                                     │
-│  ┌──────────────┐ ┌──────────────┐  │
-│  │ SharePoint KB │ │Microsoft Learn│ │
-│  └──────────────┘ └──────────────┘  │
-│                                     │
-│  ┌──────────────┐ ┌──────────────┐  │
-│  │  Work IQ      │ │ VirusTotal   │  │
-│  │(Mail/Calendar)│ │   API        │  │
-│  └──────────────┘ └──────────────┘  │
-└─────────────────────────────────────┘
-```
+The MSP Operations Commander is built as a Microsoft Copilot Studio agent with four custom workflows connected to structured knowledge sources and integrations.
+
+| Layer | Component | Purpose |
+|---|---|---|
+| Agent | **InhouseCIO Assistant** | Main Copilot Studio agent used by the MSP engineer |
+| Workflow | **Client Context Switcher** | Loads active client profile, compliance notes, special instructions, and ticket history |
+| Workflow | **Compliance Guard** | Checks risky IT actions against client-specific compliance rules |
+| Workflow | **Morning MSP Triage** | Builds a structured day plan using active ticket history, priority, client impact, and compliance risk |
+| Workflow | **Evening MSP Review** | Summarizes completed work, pending items, compliance-sensitive actions, follow-ups, and tomorrow’s priorities |
+| Knowledge Source | **Client Profiles** | SharePoint list containing client environment and compliance context |
+| Knowledge Source | **Ticket Log** | SharePoint list containing structured ticket history |
+| Knowledge Source | **SharePoint Knowledge Base** | Internal troubleshooting and process documentation |
+| Knowledge Source | **Microsoft Learn** | Microsoft product guidance |
+| Integration | **Work IQ** | Mail, calendar, and people context |
+| Integration | **VirusTotal API** | Threat intelligence for phishing and suspicious link analysis |
+
+### Architecture Flow
+
+| Input | Agent Workflow | Knowledge / Tool Used | Output |
+|---|---|---|---|
+| `Working on Pinnacle Coaching Group` | Client Context Switcher | Client Profiles + Ticket Log | Active client context loaded |
+| `Can I delete an offboarded user account?` | Compliance Guard | Client Profiles + Ticket Log | Safe compliance guidance |
+| `Start my day` | Morning MSP Triage | Ticket Log + Client Profiles | Prioritized MSP day plan |
+| `End my day` | Evening MSP Review | Ticket Log + Client Profiles | End-of-day operations summary |
 
 ## ✨ Key Features
 
