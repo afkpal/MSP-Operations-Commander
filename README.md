@@ -4,6 +4,14 @@
 
 > Agents League Hackathon — Enterprise Agents Battle | June 2026
 
+
+## 🎥 Demo Video
+
+Watch the demo here: [MSP Operations Commander Demo](https://youtu.be/Ba-ahSLbW48)
+
+> For privacy, the demo uses fictional client and ticket data. No real client names, contacts, tickets, domains, tenant details, or sensitive information are shown.
+
+
 ---
 
 ## 🎯 The Problem
