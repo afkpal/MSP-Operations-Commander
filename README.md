@@ -7,7 +7,7 @@
 
 ## 🎥 Demo Video
 
-Watch the demo here: [MSP Operations Commander Demo](https://youtu.be/Ba-ahSLbW48)
+Watch the demo here: [MSP Operations Commander Demo](https://youtu.be/WI3j7Yl2z5I)
 
 > For privacy, the demo uses fictional client and ticket data. No real client names, contacts, tickets, domains, tenant details, or sensitive information are shown.
 
