@@ -42,7 +42,7 @@ The MSP Operations Commander is built as a Microsoft Copilot Studio agent with f
 
 | Layer | Component | Purpose |
 |---|---|---|
-| Agent | **InhouseCIO Assistant** | Main Copilot Studio agent used by the MSP engineer |
+| Agent | **MSP Operations Commander (built on InhouseCIO Assistant)** | Main Copilot Studio agent used by the MSP engineer |
 | Workflow | **Client Context Switcher** | Loads active client profile, compliance notes, special instructions, and ticket history |
 | Workflow | **Compliance Guard** | Checks risky IT actions against client-specific compliance rules |
 | Workflow | **Morning MSP Triage** | Builds a structured day plan using active ticket history, priority, client impact, and compliance risk |
