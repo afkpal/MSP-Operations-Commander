@@ -36,7 +36,7 @@ The **MSP Operations Commander** transforms a Copilot Studio agent into an intel
 </p>
 
 <p align="center">
-  <em>Click the diagram to open it
+  <em>Click the diagram to open it full size.
 
 The MSP Operations Commander is built as a Microsoft Copilot Studio agent with four custom workflows connected to structured knowledge sources and integrations.
 
