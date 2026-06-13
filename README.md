@@ -14,6 +14,12 @@ Watch the demo here: [MSP Operations Commander Demo](https://youtu.be/WI3j7Yl2z5
 
 ---
 
+## 🧠 Microsoft IQ Integration
+
+This agent integrates **Microsoft Work IQ** — including **Mail IQ** (email context), **SharePoint IQ** (organizational knowledge), and **People & Calendar context** — as its Microsoft IQ intelligence layer. This satisfies the Enterprise Agents **Microsoft IQ requirement**, grounding the agent in real Microsoft 365 work context (mail, calendar, people, and documents) rather than general knowledge alone.
+
+---
+
 ## 🎯 The Problem
 
 Managed Service Providers (MSPs) juggle dozens of client environments simultaneously. Each client has unique compliance requirements, security policies, third-party integrations, and IT configurations. Engineers waste hours context-switching between clients, looking up policies, and manually checking compliance before taking action.
@@ -42,7 +48,7 @@ The MSP Operations Commander is built as a Microsoft Copilot Studio agent with f
 
 | Layer | Component | Purpose |
 |---|---|---|
-| Agent | **MSP Operations Commander (built on InhouseCIO Assistant)** | Main Copilot Studio agent used by the MSP engineer |
+| Agent | **MSP Operations Commander (my own Copilot Studio agent)** | Main Copilot Studio agent used by the MSP engineer |
 | Workflow | **Client Context Switcher** | Loads active client profile, compliance notes, special instructions, and ticket history |
 | Workflow | **Compliance Guard** | Checks risky IT actions against client-specific compliance rules |
 | Workflow | **Morning MSP Triage** | Builds a structured day plan using active ticket history, priority, client impact, and compliance risk |
