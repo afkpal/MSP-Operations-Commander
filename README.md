@@ -17,6 +17,8 @@ Watch the demo here: [MSP Operations Commander Demo](https://youtu.be/WI3j7Yl2z5
 
 > For privacy, the demo uses fictional client and ticket data. No real client names, contacts, tickets, domains, tenant details, or sensitive information are shown.
 
+> **Note on the agent name:** MSP Operations Commander was built in Microsoft Copilot Studio for this hackathon. The name **"InhouseCIO"** shown in the demo video is simply the agent's display name within the author's own Microsoft 365 environment — it refers to the same agent described here.
+
 
 ---
 
