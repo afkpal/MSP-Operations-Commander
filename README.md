@@ -4,6 +4,12 @@
 
 > Agents League Hackathon — Enterprise Agents Battle | June 2026
 
+![Microsoft Copilot Studio](https://img.shields.io/badge/Built%20with-Microsoft%20Copilot%20Studio-0078D4)
+![Track](https://img.shields.io/badge/Track-Enterprise%20Agents-5C2D91)
+![Microsoft 365](https://img.shields.io/badge/Microsoft%20365-Copilot-742774)
+![Microsoft IQ](https://img.shields.io/badge/Microsoft%20IQ-Work%20IQ%20%7C%20Mail%20IQ%20%7C%20SharePoint%20IQ-0B6A0B)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
 
 ## 🎥 Demo Video
 
@@ -14,9 +20,41 @@ Watch the demo here: [MSP Operations Commander Demo](https://youtu.be/WI3j7Yl2z5
 
 ---
 
+## 📑 Table of Contents
+
+- [Microsoft IQ Integration](#-microsoft-iq-integration)
+- [Requirements Met](#-requirements-met)
+- [The Problem](#-the-problem)
+- [The Solution](#-the-solution)
+- [Architecture](#️-architecture)
+- [Key Features](#-key-features)
+- [How It Works / Setup](#-how-it-works--setup)
+- [Security & Compliance](#-security--compliance)
+- [Client Coverage (Demo)](#-client-coverage-demo)
+- [Tech Stack](#️-tech-stack)
+- [About the Builder](#-about-the-builder)
+- [Judging Criteria Alignment](#-judging-criteria-alignment)
+
+
+---
+
 ## 🧠 Microsoft IQ Integration
 
 This agent integrates **Microsoft Work IQ** — including **Mail IQ** (email context), **SharePoint IQ** (organizational knowledge), and **People & Calendar context** — as its Microsoft IQ intelligence layer. This satisfies the Enterprise Agents **Microsoft IQ requirement**, grounding the agent in real Microsoft 365 work context (mail, calendar, people, and documents) rather than general knowledge alone.
+
+---
+
+## ✅ Requirements Met
+
+| Enterprise Agents Requirement | Status | Where to See It |
+|---|---|---|
+| **Microsoft 365 Copilot Chat agent** | ✅ Met | Agent published to Microsoft 365 Copilot and Microsoft Teams channels |
+| **Microsoft IQ integration** (Work IQ / Foundry IQ / Fabric IQ) | ✅ Met | Work IQ, Mail IQ, and SharePoint IQ enabled (see Microsoft IQ Integration section) |
+| **Public GitHub repository** | ✅ Met | This repository |
+| **Architecture diagram** | ✅ Met | `MSP_Operations_Commander.png` (see Architecture section) |
+| **Demo video (YouTube)** | ✅ Met | [Demo link](https://youtu.be/WI3j7Yl2z5I) |
+| **Project description** | ✅ Met | This README |
+| **Original work** | ✅ Met | Personal Copilot Studio agent built by the author |
 
 ---
 
@@ -120,9 +158,26 @@ Returns an end-of-day summary:
 6. End-of-day summary paragraph
 
 
+## 🧩 How It Works / Setup
+
+The agent runs entirely inside the MSP's own Microsoft 365 tenant — no client tenant access is required. It can be recreated with the following building blocks:
+
+1. **Create the Copilot Studio agent** — A single agent in Microsoft Copilot Studio with general knowledge disabled so responses stay grounded in verified data.
+2. **Build two SharePoint lists** as structured knowledge sources:
+   - **Client Profiles** — one row per client (name, contacts, environment, compliance notes, special instructions, tools).
+   - **Ticket Log** — structured ticket history (ticket number, client, subject, priority, status, resolution).
+3. **Add the four custom topics / workflows** — Client Context Switcher, Compliance Guard, Morning MSP Triage, and Evening MSP Review, each triggered by natural-language phrases.
+4. **Enable Microsoft IQ** — Turn on Work IQ, Mail IQ, and SharePoint IQ so the agent can use mail, calendar, people, and organizational document context.
+5. **Connect integrations** — Add the VirusTotal API custom connector for threat intelligence and Power Automate flows for ticket alerts with Adaptive Cards.
+6. **Publish** — Publish the agent to the Microsoft 365 Copilot and Microsoft Teams channels.
+
+> The public demo uses fictional client and ticket data only. No real client data, tenant details, or secrets are included in this repository.
+
+
 ## 🔒 Security & Compliance
 
 - **No client tenant access required** — All data stored in the MSP's own SharePoint
+- **No secrets in this repo** — Credentials, tokens, and tenant IDs are never committed (see `.gitignore`)
 - **FINRA/SEC compliance aware** — Built for regulated financial advisory firms
 - **Email archiving awareness** — Knows which clients use Global Relay, Redtail, or Smarsh
 - **Account retention rules** — Prevents accidental deletion of accounts that must be retained
