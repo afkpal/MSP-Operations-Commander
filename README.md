@@ -11,7 +11,7 @@
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 
-## ⚡ Why This Wins
+## ⚡ At a Glance
 
 **One Copilot Studio agent that helps a single MSP engineer safely run 20+ SEC/FINRA-regulated financial firms.** It switches client context instantly, intercepts irreversible compliance mistakes *before* they happen, and orchestrates the engineer's whole day — all grounded in real Microsoft 365 data via Work IQ, with zero general-knowledge hallucination.
 
