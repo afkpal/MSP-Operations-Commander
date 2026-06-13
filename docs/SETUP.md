@@ -10,8 +10,7 @@ This guide explains how to recreate the **MSP Operations Commander** agent in yo
 
 - A Microsoft 365 tenant with **Microsoft Copilot Studio** access
 - Permission to create **SharePoint lists**
-- (Optional) A **VirusTotal** API key for threat-intelligence lookups
-- (Optional) **Power Automate** for ticket-alert flows
+- **Microsoft Work IQ** available in the tenant (Work IQ Mail, Calendar, and SharePoint)
 
 ---
 
@@ -65,24 +64,17 @@ Use a `Global.ClientName` variable so the active client persists across all topi
 
 ---
 
-## 5. Enable Microsoft IQ
+## 5. Enable Microsoft Work IQ
 
-Turn on the following so the agent uses real Microsoft 365 work context:
+Turn on the following Work IQ tools so the agent uses real Microsoft 365 work context:
 
-- **Work IQ** — people and work context
-- **Mail IQ** — email context
-- **SharePoint IQ** — organizational documents and knowledge
-
----
-
-## 6. Connect Integrations (Optional)
-
-- **VirusTotal API** — add as a custom connector for phishing / link analysis
-- **Power Automate** — ticket-alert flows with Adaptive Cards
+- **Work IQ Mail** — email context
+- **Work IQ Calendar** — calendar and scheduling context
+- **Work IQ SharePoint** — organizational documents and knowledge
 
 ---
 
-## 7. Publish
+## 6. Publish
 
 Publish the agent to the **Microsoft 365 Copilot** and **Microsoft Teams** channels.
 
