@@ -17,9 +17,11 @@ Watch the demo here: [MSP Operations Commander Demo](https://youtu.be/WI3j7Yl2z5
 
 > For privacy, the demo uses fictional client and ticket data. No real client names, contacts, tickets, domains, tenant details, or sensitive information are shown.
 
+> **Note on demo names:** All client names used in the demo video, screenshots, and this repository (e.g., "Northwind Coaching Group," "Contoso Capital Advisors") are **fictional placeholders** created for demonstration only. Any resemblance to real organizations is coincidental. No real client, employer, or tenant data is used anywhere in this project.
+
 > **Note on the agent name:** MSP Operations Commander was built in Microsoft Copilot Studio for this hackathon. The name **"InhouseCIO"** shown in the demo video is simply the agent's display name within the author's own Microsoft 365 environment — it refers to the same agent described here.
 
-> **Personal project disclaimer:** This is an independent personal project, designed and built by the author in his own time and his own Microsoft 365 environment. It is **not** an official InhouseCIO product, service, or endorsement, and it does not include or expose any InhouseCIO or client data, systems, or credentials. References to "InhouseCIO" indicate only the author's employer and the agent's chosen display name.
+> **Personal project disclaimer:** This is an independent personal project, designed and built by the author for this hackathon in his own Microsoft 365 environment. It is **not** an official InhouseCIO product, service, or endorsement, and it does not include or expose any InhouseCIO or client data, systems, or credentials. References to "InhouseCIO" indicate only the author's employer and the agent's chosen display name.
 
 
 ---
@@ -76,7 +78,7 @@ By grounding the agent in real Microsoft 365 work context — rather than genera
 | **Architecture diagram** | ✅ Met | `MSP_Operations_Commander.png` (see Architecture section) |
 | **Demo video (YouTube)** | ✅ Met | [Demo link](https://youtu.be/WI3j7Yl2z5I) |
 | **Project description** | ✅ Met | This README |
-| **Original work** | ✅ Met | Personal Copilot Studio agent built by the author |
+| **Original work** | ✅ Met | Personal Copilot Studio agent built by the author for this hackathon |
 
 ---
 
@@ -88,7 +90,7 @@ Managed Service Providers (MSPs) juggle dozens of client environments simultaneo
 
 The **MSP Operations Commander** transforms a Copilot Studio agent into an intelligent operations hub that:
 
-- **Switches client context instantly** — Say "Working on Pinnacle Coaching Group" and the agent loads that client's full environment profile, contacts, compliance rules, and ticket history
+- **Switches client context instantly** — Say "Working on Northwind Coaching Group" and the agent loads that client's full environment profile, contacts, compliance rules, and ticket history
 - **Guards compliance automatically** — Before risky actions (offboarding, CA changes, license removal), the agent checks client-specific compliance rules and warns the engineer
 - **Runs morning-to-evening orchestration** — Morning triage builds a prioritized day plan; evening review summarizes completed work, flags compliance actions, and previews tomorrow
 - **Learns from ticket history** — Cross-references past tickets to identify recurring issues and recommend proven solutions
@@ -134,7 +136,7 @@ The MSP Operations Commander is built as a Microsoft Copilot Studio agent with f
 
 | Input | Agent Workflow | Knowledge / Tool Used | Output |
 |---|---|---|---|
-| `Working on Pinnacle Coaching Group` | Client Context Switcher | Client Profiles + Ticket Log | Active client context loaded |
+| `Working on Northwind Coaching Group` | Client Context Switcher | Client Profiles + Ticket Log | Active client context loaded |
 | `Can I delete an offboarded user account?` | Compliance Guard | Client Profiles + Ticket Log | Safe compliance guidance |
 | `Start my day` | Morning MSP Triage | Ticket Log + Client Profiles | Prioritized MSP day plan |
 | `End my day` | Evening MSP Review | Ticket Log + Client Profiles | End-of-day operations summary |
@@ -145,8 +147,8 @@ The MSP Operations Commander is built as a Microsoft Copilot Studio agent with f
 
 | Trigger | What Happens |
 |---------|-------------|
-| "Working on Pinnacle Coaching Group" | Loads full client profile: contacts, environment, compliance rules, tools, and past tickets |
-| "Switch to Ridgewood Capital Advisors" | Instantly switches context to a different client |
+| "Working on Northwind Coaching Group" | Loads full client profile: contacts, environment, compliance rules, tools, and past tickets |
+| "Switch to Contoso Capital Advisors" | Instantly switches context to a different client |
 
 - Uses `Global.ClientName` variable accessible across all topics
 - Pulls verified data from SharePoint Client Profiles list
@@ -156,8 +158,8 @@ The MSP Operations Commander is built as a Microsoft Copilot Studio agent with f
 
 | Action | Agent Response |
 |--------|----------------|
-| "Can I delete this user account?" | Checks client compliance notes → Pinnacle Coaching Group: "Do NOT delete. Disable, convert mailbox to shared, remove license." |
-| "Change Conditional Access policy" | Checks CA notes → Ridgewood Capital Advisors: "FINRA registered. Global Relay archiving required. Document all changes." |
+| "Can I delete this user account?" | Checks client compliance notes → Northwind Coaching Group: "Do NOT delete. Disable, convert mailbox to shared, remove license." |
+| "Change Conditional Access policy" | Checks CA notes → Contoso Capital Advisors: "FINRA registered. Global Relay archiving required. Document all changes." |
 
 - Validates every risky action against client-specific rules
 - Returns: Verdict, reasoning, required approval, safe steps, and client-specific warnings
@@ -250,15 +252,15 @@ This agent is designed for a sensitive, regulated domain (financial advisory fir
 
 ## 📊 Client Coverage (Demo)
 
-> All clients below are **fictional** and used for demonstration only. They do not represent real InhouseCIO clients or any real organizations.
+> All clients below are **fictional placeholders** used for demonstration only. They do not represent real InhouseCIO clients or any real organizations, and any resemblance to actual companies is coincidental.
 
 | Client | Industry | Environment | Compliance |
 |--------|----------|-------------|------------|
-| Pinnacle Coaching Group | Executive Coaching | Full Cloud | No account deletion, mailbox retention |
-| Ridgewood Capital Advisors | Wealth Management | Full Cloud | FINRA, Global Relay, CA enforced |
-| Silverline Wealth Partners | Financial Advisory | Full Cloud | FINRA, CodeTwo, SEC regulated |
-| Summit Financial Group | Financial Advisory | Full Cloud | FINRA, Smarsh archiving |
-| Legacy Wealth Advisors | Financial Advisory | Full Cloud | FINRA, Redtail, Wealthbox CRM |
+| Northwind Coaching Group | Executive Coaching | Full Cloud | No account deletion, mailbox retention |
+| Contoso Capital Advisors | Wealth Management | Full Cloud | FINRA, Global Relay, CA enforced |
+| Fabrikam Wealth Partners | Financial Advisory | Full Cloud | FINRA, CodeTwo, SEC regulated |
+| Tailwind Financial Group | Financial Advisory | Full Cloud | FINRA, Smarsh archiving |
+| Adventure Works Advisors | Financial Advisory | Full Cloud | FINRA, Redtail, Wealthbox CRM |
 
 ## 🛠️ Tech Stack
 
@@ -275,7 +277,7 @@ This agent is designed for a sensitive, regulated domain (financial advisory fir
 
 - Works as an MSP engineer supporting 20+ financial advisory firm clients across Microsoft 365 environments
 - Works remotely from Jordan, supporting US-based clients
-- Built this agent independently, in his own time, to solve his own daily operational challenges as a solo MSP engineer
+- Built this agent independently for the Agents League Hackathon, inspired by his own daily operational challenges as a solo MSP engineer
 
 > This project is a personal, independent work and is not affiliated with, endorsed by, or sponsored by InhouseCIO, LLC.
 
