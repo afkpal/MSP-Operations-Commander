@@ -20,6 +20,16 @@ Watch the demo here: [MSP Operations Commander Demo](https://youtu.be/WI3j7Yl2z5
 
 ---
 
+## 🔗 Quick Links
+
+- 🎥 [Demo Video](https://youtu.be/WI3j7Yl2z5I)
+- 🧩 [Setup Guide (docs/SETUP.md)](docs/SETUP.md)
+- 🤝 [Contributing & Transparency](CONTRIBUTING.md)
+- 📄 [License (MIT)](LICENSE)
+
+
+---
+
 ## 📑 Table of Contents
 
 - [Microsoft IQ Integration](#-microsoft-iq-integration)
@@ -28,6 +38,7 @@ Watch the demo here: [MSP Operations Commander Demo](https://youtu.be/WI3j7Yl2z5
 - [The Solution](#-the-solution)
 - [Architecture](#️-architecture)
 - [Key Features](#-key-features)
+- [Screenshots](#-screenshots)
 - [How It Works / Setup](#-how-it-works--setup)
 - [Security & Compliance](#-security--compliance)
 - [Client Coverage (Demo)](#-client-coverage-demo)
@@ -158,9 +169,35 @@ Returns an end-of-day summary:
 6. End-of-day summary paragraph
 
 
+## 📸 Screenshots
+
+> Screenshots of the agent in action. To add your own, upload the image files to a `screenshots/` folder in this repo and the images below will render automatically.
+
+| Workflow | Screenshot |
+|---|---|
+| Client Context Switcher | `screenshots/client-context-switcher.png` |
+| Compliance Guard verdict | `screenshots/compliance-guard.png` |
+| Morning MSP Triage | `screenshots/morning-triage.png` |
+
+<!--
+Once you upload the files, replace the table above with rendered images, e.g.:
+
+### Client Context Switcher
+![Client Context Switcher](screenshots/client-context-switcher.png)
+
+### Compliance Guard
+![Compliance Guard](screenshots/compliance-guard.png)
+
+### Morning MSP Triage
+![Morning MSP Triage](screenshots/morning-triage.png)
+-->
+
+
 ## 🧩 How It Works / Setup
 
-The agent runs entirely inside the MSP's own Microsoft 365 tenant — no client tenant access is required. It can be recreated with the following building blocks:
+The agent runs entirely inside the MSP's own Microsoft 365 tenant — no client tenant access is required. A full step-by-step setup guide (including SharePoint list schemas) is available in **[docs/SETUP.md](docs/SETUP.md)**.
+
+Quick overview:
 
 1. **Create the Copilot Studio agent** — A single agent in Microsoft Copilot Studio with general knowledge disabled so responses stay grounded in verified data.
 2. **Build two SharePoint lists** as structured knowledge sources:
