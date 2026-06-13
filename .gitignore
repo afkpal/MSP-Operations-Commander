@@ -1,0 +1,31 @@
+# ===== Secrets & Credentials (NEVER COMMIT) =====
+.env
+.env.*
+appsettings.json
+appsettings.*.json
+*.user
+**/.secrets/
+config/secrets.*
+*.pem
+*.pfx
+*.key
+
+# ===== Microsoft 365 / Copilot Studio / Power Platform =====
+*.msapp
+*.zip
+.msapp/
+PowerPlatform/.cache/
+
+# ===== Node / Agents Toolkit (if used) =====
+node_modules/
+dist/
+build/
+.deployment/
+env/.env.*.user
+
+# ===== OS / Editor =====
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
