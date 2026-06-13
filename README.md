@@ -19,6 +19,8 @@ Watch the demo here: [MSP Operations Commander Demo](https://youtu.be/WI3j7Yl2z5
 
 > **Note on the agent name:** MSP Operations Commander was built in Microsoft Copilot Studio for this hackathon. The name **"InhouseCIO"** shown in the demo video is simply the agent's display name within the author's own Microsoft 365 environment — it refers to the same agent described here.
 
+> **Personal project disclaimer:** This is an independent personal project, designed and built by the author in his own time and his own Microsoft 365 environment. It is **not** an official InhouseCIO product, service, or endorsement, and it does not include or expose any InhouseCIO or client data, systems, or credentials. References to "InhouseCIO" indicate only the author's employer and the agent's chosen display name.
+
 
 ---
 
@@ -95,7 +97,7 @@ The **MSP Operations Commander** transforms a Copilot Studio agent into an intel
 
 This is not a throwaway demo — it is a production-minded solution built by a working MSP engineer to solve a daily, real-world operational problem.
 
-- **Built from real operations.** The author manages 20+ financial advisory and wealth management firms on Microsoft 365. The workflows mirror the actual InhouseCIO onboarding, offboarding, compliance, and triage procedures used in production.
+- **Built from real-world experience.** The author works as an MSP engineer supporting 20+ financial advisory and wealth management firms on Microsoft 365. The workflows are modeled on common, real-world MSP onboarding, offboarding, compliance, and triage patterns — recreated here with fictional demo data, using no real client or employer data.
 - **Prevents costly mistakes.** In SEC/FINRA-regulated environments, a single wrong action (deleting an account that must be retained, changing an archived-mailbox policy) can create a compliance violation. The Compliance Guard intercepts these before they happen.
 - **Saves engineer time every day.** Instant client context switching and automated morning triage remove the repetitive lookup work that slows a solo MSP engineer down across many tenants.
 - **Realistically adoptable.** It runs entirely inside the MSP's own Microsoft 365 tenant, requires no client tenant access, and uses only structured SharePoint data — so any MSP could stand it up with the included setup guide.
@@ -248,6 +250,8 @@ This agent is designed for a sensitive, regulated domain (financial advisory fir
 
 ## 📊 Client Coverage (Demo)
 
+> All clients below are **fictional** and used for demonstration only. They do not represent real InhouseCIO clients or any real organizations.
+
 | Client | Industry | Environment | Compliance |
 |--------|----------|-------------|------------|
 | Pinnacle Coaching Group | Executive Coaching | Full Cloud | No account deletion, mailbox retention |
@@ -269,9 +273,11 @@ This agent is designed for a sensitive, regulated domain (financial advisory fir
 
 **Adel Alkhatib** — Cloud System Engineer at InhouseCIO, LLC
 
-- Manages 20+ financial advisory firm clients across Microsoft 365 environments
+- Works as an MSP engineer supporting 20+ financial advisory firm clients across Microsoft 365 environments
 - Works remotely from Jordan, supporting US-based clients
-- Built this agent to solve his own daily operational challenges as a solo MSP engineer
+- Built this agent independently, in his own time, to solve his own daily operational challenges as a solo MSP engineer
+
+> This project is a personal, independent work and is not affiliated with, endorsed by, or sponsored by InhouseCIO, LLC.
 
 ## 📋 Judging Criteria Alignment
 
