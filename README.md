@@ -92,7 +92,7 @@ The **MSP Operations Commander** transforms a Copilot Studio agent into an intel
 
 - **Switches client context instantly** — Say "Working on Contoso Capital Advisors" and the agent loads that client's full environment profile, contacts, compliance rules, and ticket history
 - **Guards compliance automatically** — Before risky actions (offboarding, CA changes, license removal), the agent checks client-specific compliance rules and warns the engineer
-- **Runs morning-to-evening orchestration** — Morning triage builds a prioritized day plan; evening review summarizes completed work, flags compliance actions, and previews tomorrow
+- **Runs morning-to-evening orchestration** — Morning triage builds a prioritized, calendar-aware day plan; evening review summarizes completed work, flags compliance actions, and previews tomorrow
 - **Learns from ticket history** — Cross-references past tickets to identify recurring issues and recommend proven solutions
 
 ## 🌍 Real-World Impact
@@ -123,7 +123,7 @@ The MSP Operations Commander is built as a Microsoft Copilot Studio agent with f
 | Agent | **MSP Operations Commander (my own Copilot Studio agent)** | Main Copilot Studio agent used by the MSP engineer |
 | Workflow | **Client Context Switcher** | Loads active client profile, compliance notes, special instructions, and ticket history |
 | Workflow | **Compliance Guard** | Checks risky IT actions against client-specific compliance rules |
-| Workflow | **Morning MSP Triage** | Builds a structured day plan using active ticket history, priority, client impact, and compliance risk |
+| Workflow | **Morning MSP Triage** | Builds a structured day plan using active ticket history, priority, client impact, compliance risk, and calendar context |
 | Workflow | **Evening MSP Review** | Summarizes completed work, pending items, compliance-sensitive actions, follow-ups, and tomorrow’s priorities |
 | Knowledge Source | **Client Profiles** | SharePoint list containing client environment and compliance context |
 | Knowledge Source | **Ticket Log** | SharePoint list containing structured ticket history |
@@ -137,8 +137,8 @@ The MSP Operations Commander is built as a Microsoft Copilot Studio agent with f
 |---|---|---|---|
 | `Working on Contoso Capital Advisors` | Client Context Switcher | Client Profiles + Ticket Log | Active client context loaded |
 | `Can I delete an offboarded user account?` | Compliance Guard | Client Profiles + Ticket Log | Safe compliance guidance |
-| `Start my day` | Morning MSP Triage | Ticket Log + Client Profiles | Prioritized MSP day plan |
-| `End my day` | Evening MSP Review | Ticket Log + Client Profiles | End-of-day operations summary |
+| `Start my day` | Morning MSP Triage | Ticket Log + Client Profiles + Work IQ Calendar | Calendar-aware, prioritized MSP day plan |
+| `End my day` | Evening MSP Review | Ticket Log + Client Profiles + Work IQ Calendar | Calendar-aware end-of-day operations summary |
 
 ## ✨ Key Features
 
@@ -173,7 +173,7 @@ Returns a structured day plan:
 1. Active critical or urgent items
 2. High-priority tickets
 3. Waiting client responses
-4. Calendar-aware day plan
+4. Calendar-aware day plan (reads the engineer's calendar via Work IQ Calendar)
 5. Compliance flags for active clients
 6. Recommended first action
 
@@ -187,7 +187,7 @@ Returns an end-of-day summary:
 2. Pending or unresolved items
 3. Compliance actions taken today
 4. Follow-ups needed
-5. Tomorrow preview
+5. Tomorrow preview (calendar-aware via Work IQ Calendar)
 6. End-of-day summary paragraph
 
 
@@ -278,7 +278,7 @@ This agent is designed for a sensitive, regulated domain (financial advisory fir
 | Criteria (Weight) | How This Agent Delivers |
 |-------------------|------------------------|
 | Accuracy & Relevance (20%) | Uses only verified SharePoint data, no hallucination, client-specific responses |
-| Reasoning & Multi-step (20%) | Compliance Guard validates actions against multiple data points; Morning Triage cross-references tickets, clients, and compliance |
+| Reasoning & Multi-step (20%) | Compliance Guard validates actions against multiple data points; Morning Triage cross-references tickets, clients, calendar, and compliance |
 | Reliability & Safety (20%) | Compliance-first design for SEC/FINRA regulated firms; prevents account deletion, enforces retention policies; Responsible AI guardrails keep a human in control |
 | Creativity & Originality (15%) | Multi-tenant MSP context switching is unique — no other entry manages multiple client environments this way |
 | UX & Presentation (15%) | Natural language triggers, structured outputs, morning-to-evening workflow orchestration |
