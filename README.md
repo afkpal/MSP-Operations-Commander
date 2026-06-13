@@ -20,9 +20,7 @@
 
 > **Note on demo names:** All client names used in the demo videos, screenshots, and this repository (e.g., "Contoso Capital Advisors") are **fictional placeholders** created for demonstration only. Any resemblance to real organizations is coincidental. No real client, employer, or tenant data is used anywhere in this project.
 
-> **Note on the agent name:** MSP Operations Commander was built in Microsoft Copilot Studio for this hackathon. The name **"InhouseCIO"** shown in the demo is simply the agent's display name within the author's own Microsoft 365 environment — it refers to the same agent described here.
-
-> **Personal project disclaimer:** This is an independent personal project, designed and built by the author for this hackathon in his own Microsoft 365 environment. It is **not** an official InhouseCIO product, service, or endorsement, and it does not include or expose any InhouseCIO or client data, systems, or credentials. References to "InhouseCIO" indicate only the author's employer and the agent's chosen display name.
+> **Personal project disclaimer:** This is an independent personal project, designed and built by the author for this hackathon in his own Microsoft 365 environment. It is **not** an official product, service, or endorsement of the author's employer, and it does not include or expose any employer or client data, systems, or credentials.
 
 
 ---
@@ -78,7 +76,7 @@ By grounding the agent in real Microsoft 365 work context — rather than genera
 | **Enterprise security & Responsible AI** | ✅ Met | See Security & Compliance and Responsible AI sections |
 | **Public GitHub repository** | ✅ Met | This repository |
 | **Architecture diagram** | ✅ Met | `MSP_Operations_Commander.png` (see Architecture section) |
-| **Demo video (YouTube)** | ✅ Met | [Teams Demo](https://youtu.be/nIDmqlt1PXo) and [Copilot Studio Demo](https://youtu.be/Ag4nbP25j0c) |
+| **Demo videos (YouTube)** | ✅ Met | [Teams Demo](https://youtu.be/nIDmqlt1PXo) and [Copilot Studio Demo](https://youtu.be/Ag4nbP25j0c) |
 | **Project description** | ✅ Met | This README |
 | **Original work** | ✅ Met | Personal Copilot Studio agent built by the author for this hackathon |
 
@@ -254,7 +252,7 @@ This agent is designed for a sensitive, regulated domain (financial advisory fir
 
 ## 📊 Client Coverage (Demo)
 
-> The demo uses a single **fictional placeholder** client. It does not represent a real InhouseCIO client or any real organization, and any resemblance to an actual company is coincidental.
+> The demo uses a single **fictional placeholder** client. It does not represent a real client or any real organization, and any resemblance to an actual company is coincidental.
 
 | Client | Industry | Environment | Compliance |
 |--------|----------|-------------|------------|
@@ -277,7 +275,7 @@ This agent is designed for a sensitive, regulated domain (financial advisory fir
 - Works remotely from Jordan, supporting US-based clients
 - Built this agent independently for the Agents League Hackathon, inspired by his own daily operational challenges as a solo MSP engineer
 
-> This project is a personal, independent work and is not affiliated with, endorsed by, or sponsored by InhouseCIO, LLC.
+> This project is a personal, independent work and is not affiliated with, endorsed by, or sponsored by his employer.
 
 ## 📋 Judging Criteria Alignment
 
