@@ -171,26 +171,20 @@ Returns an end-of-day summary:
 
 ## 📸 Screenshots
 
-> Screenshots of the agent in action. To add your own, upload the image files to a `screenshots/` folder in this repo and the images below will render automatically.
-
-| Workflow | Screenshot |
-|---|---|
-| Client Context Switcher | `screenshots/client-context-switcher.png` |
-| Compliance Guard verdict | `screenshots/compliance-guard.png` |
-| Morning MSP Triage | `screenshots/morning-triage.png` |
-
-<!--
-Once you upload the files, replace the table above with rendered images, e.g.:
-
 ### Client Context Switcher
-![Client Context Switcher](screenshots/client-context-switcher.png)
+*Type "Working on \<client\>" and the agent instantly loads that client's full profile, compliance rules, and ticket history.*
+
+![Client Context Switcher](client-context-switcher.png)
 
 ### Compliance Guard
-![Compliance Guard](screenshots/compliance-guard.png)
+*Before any risky action, the agent checks client-specific compliance rules and returns a safe verdict with reasoning.*
+
+![Compliance Guard](compliance-guard.png)
 
 ### Morning MSP Triage
-![Morning MSP Triage](screenshots/morning-triage.png)
--->
+*"Start my day" builds a prioritized, calendar-aware day plan across all active clients and tickets.*
+
+![Morning MSP Triage](morning-triage.png)
 
 
 ## 🧩 How It Works / Setup
