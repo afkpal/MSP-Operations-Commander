@@ -7,7 +7,7 @@
 ![Microsoft Copilot Studio](https://img.shields.io/badge/Built%20with-Microsoft%20Copilot%20Studio-0078D4)
 ![Track](https://img.shields.io/badge/Track-Enterprise%20Agents-5C2D91)
 ![Microsoft 365](https://img.shields.io/badge/Microsoft%20365-Copilot-742774)
-![Microsoft IQ](https://img.shields.io/badge/Microsoft%20IQ-Work%20IQ%20%7C%20Mail%20IQ%20%7C%20SharePoint%20IQ-0B6A0B)
+![Microsoft IQ](https://img.shields.io/badge/Microsoft%20IQ-Work%20IQ-0B6A0B)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 
@@ -59,7 +59,7 @@
 
 ## 🧠 Microsoft IQ Integration
 
-This agent integrates **Microsoft Work IQ** — the intelligence layer behind organizational knowledge that builds memory from emails, meetings, chats, and documents to understand work context, people, and relationships. This includes **Mail IQ** (email context), **SharePoint IQ** (organizational knowledge grounding), and **People & Calendar context**.
+This agent integrates **Microsoft Work IQ** — the intelligence layer behind organizational knowledge that builds memory from emails, meetings, chats, and documents to understand work context, people, and relationships. The agent uses three Work IQ tools: **Work IQ Mail** (email context), **Work IQ Calendar** (calendar and scheduling context), and **Work IQ SharePoint** (organizational knowledge grounding).
 
 By grounding the agent in real Microsoft 365 work context — rather than general model knowledge alone — Work IQ satisfies the Enterprise Agents **Microsoft IQ requirement** and enables a Retrieval-Augmented Generation (RAG) pattern: every answer is grounded in verified enterprise data (SharePoint Client Profiles, Ticket Log) and respects Microsoft 365 permissions.
 
@@ -70,7 +70,7 @@ By grounding the agent in real Microsoft 365 work context — rather than genera
 | Enterprise Agents Requirement | Status | Where to See It |
 |---|---|---|
 | **Microsoft 365 Copilot Chat agent** | ✅ Met | Agent published to Microsoft 365 Copilot and Microsoft Teams channels |
-| **Microsoft IQ integration** (Work IQ / Foundry IQ / Fabric IQ / Web IQ) | ✅ Met | Work IQ, Mail IQ, and SharePoint IQ enabled (see Microsoft IQ Integration section) |
+| **Microsoft IQ integration** (Work IQ / Foundry IQ / Fabric IQ / Web IQ) | ✅ Met | Work IQ Mail, Calendar, and SharePoint enabled (see Microsoft IQ Integration section) |
 | **Grounded intelligence (RAG)** | ✅ Met | SharePoint Client Profiles + Ticket Log used for retrieval; general knowledge disabled |
 | **Clear agent architecture** | ✅ Met | Architecture diagram + workflow tables below |
 | **Enterprise security & Responsible AI** | ✅ Met | See Security & Compliance and Responsible AI sections |
@@ -116,7 +116,7 @@ This is not a throwaway demo — it is a production-minded solution built by a w
   <em>Click the diagram to open it full size.</em>
 </p>
 
-The MSP Operations Commander is built as a Microsoft Copilot Studio agent with four custom workflows connected to structured knowledge sources and integrations.
+The MSP Operations Commander is built as a Microsoft Copilot Studio agent with four custom workflows connected to structured knowledge sources and Microsoft Work IQ.
 
 | Layer | Component | Purpose |
 |---|---|---|
@@ -127,10 +127,9 @@ The MSP Operations Commander is built as a Microsoft Copilot Studio agent with f
 | Workflow | **Evening MSP Review** | Summarizes completed work, pending items, compliance-sensitive actions, follow-ups, and tomorrow’s priorities |
 | Knowledge Source | **Client Profiles** | SharePoint list containing client environment and compliance context |
 | Knowledge Source | **Ticket Log** | SharePoint list containing structured ticket history |
-| Knowledge Source | **SharePoint Knowledge Base** | Internal troubleshooting and process documentation |
-| Knowledge Source | **Microsoft Learn** | Microsoft product guidance |
-| Integration | **Work IQ** | Mail, calendar, and people context |
-| Integration | **VirusTotal API** | Threat intelligence for phishing and suspicious link analysis |
+| Integration | **Work IQ Mail** | Email context |
+| Integration | **Work IQ Calendar** | Calendar and scheduling context |
+| Integration | **Work IQ SharePoint** | Organizational knowledge grounding |
 
 ### Architecture Flow
 
@@ -221,9 +220,8 @@ Quick overview:
    - **Client Profiles** — one row per client (name, contacts, environment, compliance notes, special instructions, tools).
    - **Ticket Log** — structured ticket history (ticket number, client, subject, priority, status, resolution).
 3. **Add the four custom topics / workflows** — Client Context Switcher, Compliance Guard, Morning MSP Triage, and Evening MSP Review, each triggered by natural-language phrases.
-4. **Enable Microsoft IQ** — Turn on Work IQ, Mail IQ, and SharePoint IQ so the agent can use mail, calendar, people, and organizational document context.
-5. **Connect integrations** — Add the VirusTotal API custom connector for threat intelligence and Power Automate flows for ticket alerts with Adaptive Cards.
-6. **Publish** — Publish the agent to the Microsoft 365 Copilot and Microsoft Teams channels.
+4. **Enable Microsoft Work IQ** — Turn on Work IQ Mail, Work IQ Calendar, and Work IQ SharePoint so the agent can use mail, calendar, people, and organizational document context.
+5. **Publish** — Publish the agent to the Microsoft 365 Copilot and Microsoft Teams channels.
 
 > The public demo uses fictional client and ticket data only. No real client data, tenant details, or secrets are included in this repository.
 
@@ -235,7 +233,6 @@ Quick overview:
 - **FINRA/SEC compliance aware** — Built for regulated financial advisory firms
 - **Email archiving awareness** — Knows which clients use Global Relay, Redtail, or Smarsh
 - **Account retention rules** — Prevents accidental deletion of accounts that must be retained
-- **VirusTotal integration** — Real-time threat intelligence for phishing analysis
 - **No AI hallucination** — General knowledge disabled; agent uses only verified SharePoint data
 - **Permission-aware retrieval** — Work IQ and SharePoint grounding honor existing Microsoft 365 permissions; the agent only surfaces data the signed-in user is authorized to see
 
@@ -261,10 +258,9 @@ This agent is designed for a sensitive, regulated domain (financial advisory fir
 ## 🛠️ Tech Stack
 
 - **Microsoft Copilot Studio** — Agent builder with custom topics and generative AI
+- **Claude Opus 4.8** — Underlying model powering the agent
 - **SharePoint Online** — Client Profiles list + Ticket Log list as structured knowledge sources
-- **Work IQ (Microsoft Graph)** — Mail, calendar, and people integration
-- **VirusTotal API** — Custom connector for real-time threat intelligence
-- **Power Automate** — Ticket alert flows with Adaptive Cards
+- **Microsoft Work IQ** — Work IQ Mail, Work IQ Calendar, and Work IQ SharePoint for mail, calendar, people, and organizational context
 - **Microsoft Teams** — Primary agent channel
 
 ## 👤 About the Builder
