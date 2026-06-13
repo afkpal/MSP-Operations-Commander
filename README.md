@@ -286,7 +286,7 @@ This agent is designed for a sensitive, regulated domain (financial advisory fir
 | Reliability & Safety (20%) | Compliance-first design for SEC/FINRA regulated firms; prevents account deletion, enforces retention policies; Responsible AI guardrails keep a human in control |
 | Creativity & Originality (15%) | Multi-tenant MSP context switching is unique — no other entry manages multiple client environments this way |
 | UX & Presentation (15%) | Natural language triggers, structured outputs, morning-to-evening workflow orchestration |
-| Completeness (10%) | Full lifecycle: context loading → compliance checking → daily orchestration → ticket history |
+| Community Vote (10%) | Public-facing, easy-to-grasp demo with a compelling compliance-safety story designed to resonate in the Discord community poll |
 
 ---
 
