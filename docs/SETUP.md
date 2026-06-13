@@ -24,7 +24,7 @@ The agent is grounded in two structured SharePoint lists.
 | Column | Type | Purpose |
 |---|---|---|
 | Client Name | Single line of text | Primary key used by the Client Context Switcher |
-| Industry | Single line of text | e.g., Wealth Management, Executive Coaching |
+| Industry | Single line of text | e.g., Wealth Management, Investment Advisory |
 | Primary Contact | Single line of text | Main client contact |
 | Environment | Single line of text | e.g., Full Cloud, Hybrid |
 | Compliance Notes | Multiple lines of text | Client-specific rules (e.g., "Do NOT delete accounts") |
