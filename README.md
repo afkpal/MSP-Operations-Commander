@@ -2,9 +2,7 @@
 
 **AI-powered operations command center for Managed Service Providers — built with Microsoft Copilot Studio**
 
-> Agents League Hackathon — Enterprise Agents Battle | June 2026
-
-🏢 **Enterprise Agents** · [Microsoft Agents League @ AI Skills Fest](https://github.com/microsoft/Agents-League-AISF-Regulations) — June 2026
+> Agents League Hackathon — [Enterprise Agents Battle](https://github.com/microsoft/Agents-League-AISF-Regulations) | June 2026
 
 ![Microsoft Copilot Studio](https://img.shields.io/badge/Built%20with-Microsoft%20Copilot%20Studio-0078D4)
 ![Track](https://img.shields.io/badge/Track-Enterprise%20Agents-5C2D91)
