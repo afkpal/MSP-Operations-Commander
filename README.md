@@ -280,6 +280,7 @@ This agent is designed for a sensitive, regulated domain (financial advisory fir
 - Works as an MSP engineer supporting 20+ financial advisory firm clients across Microsoft 365 environments
 - Works remotely from Jordan, supporting US-based clients
 - Built this agent independently for the Agents League Hackathon, inspired by his own daily operational challenges as a solo MSP engineer
+- Connect on [LinkedIn](https://www.linkedin.com/in/adel89)
 
 > This project is a personal, independent work and is not affiliated with, endorsed by, or sponsored by his employer.
 
