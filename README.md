@@ -278,7 +278,7 @@ This agent is designed for a sensitive, regulated domain (financial advisory fir
 **Adel Alkhatib** — Cloud System Engineer at InhouseCIO, LLC
 
 - Works as an MSP engineer supporting 20+ financial advisory firm clients across Microsoft 365 environments
-- Works remotely from Jordan, supporting US-based clients
+- Works remotely supporting US-based clients
 - Built this agent independently for the Agents League Hackathon, inspired by his own daily operational challenges as a solo MSP engineer
 - Connect on [LinkedIn](https://www.linkedin.com/in/adel89)
 
